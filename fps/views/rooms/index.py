@@ -1,9 +1,6 @@
 from django.http import HttpResponse,JsonResponse
 from fps.models import Room
 
-def index(request):
-    return HttpResponse("FPS后端界面！！！")
-
 def get_room_list(request):
     rooms = []
     for room in Room.objects.all().order_by('port'):
@@ -35,4 +32,3 @@ def remove_room(request):
     return JsonResponse({
         'error_message': "success",
     })
-
