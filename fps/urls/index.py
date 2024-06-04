@@ -5,4 +5,5 @@ urlpatterns = [
     path("",index),
     path("rooms/",include("fps.urls.rooms.index")),
     path("gameusers/",include("fps.urls.gameusers.index")),
+    path("schedule/",include("fps.urls.schedule.index")),
 ]
